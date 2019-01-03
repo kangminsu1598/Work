@@ -1,5 +1,10 @@
-import numpy as np
+import random
+from pprint import pprint
+import json
+import requests
 
-x = 1
-y = 2
-z = x + y
+url = "https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=837"
+connect = requests.get(url)
+lotto = connect.json()
+pprint(lotto)
+
